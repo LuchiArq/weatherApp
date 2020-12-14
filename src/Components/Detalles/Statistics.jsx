@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import {Line} from 'react-chartjs-2'
 import 'chartjs-plugin-datalabels';
 import moment from 'moment-timezone'
-import '../Card/node_modules/moment/locale/es'  
+import 'moment/locale/es'  
 
 
 export default function Statistics({detalles,datos}){

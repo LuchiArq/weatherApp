@@ -1,10 +1,9 @@
 import React from 'react';
 import './current.scss';
-import { useSelector } from 'react-redux';
 import {setAnimacion} from '../funciones'
 import Lottie from 'react-lottie'
 import moment from 'moment-timezone'
-import '../Card/node_modules/moment/locale/es'
+import 'moment/locale/es'
 
 export default function Current({datos,detalles}){
 moment.locale('es')

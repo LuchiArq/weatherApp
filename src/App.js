@@ -1,7 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import Container from './Components/Container.jsx'
-import Nav from './Components/nav/Nav'
+import Container from './Components/Container/Container'
+import Nav from './Components/Nav/Nav'
 import CardDetalles from './Components/Detalles/CardDetalles'
 import { useDispatch, useSelector } from 'react-redux';
 
