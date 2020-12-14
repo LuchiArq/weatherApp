@@ -1,8 +1,6 @@
 import React from 'react';
-import Nav from './nav/Nav';
 import './container.scss';
-import  Card from './card/Card'
-import CardDetalles from './Detalles/CardDetalles'
+import  Card from '../Card/Card'
 import { useSelector } from 'react-redux';
 
 

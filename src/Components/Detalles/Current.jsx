@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import {setAnimacion} from '../funciones'
 import Lottie from 'react-lottie'
 import moment from 'moment-timezone'
-import 'moment/locale/es'
+import '../Card/node_modules/moment/locale/es'
 
 export default function Current({datos,detalles}){
 moment.locale('es')

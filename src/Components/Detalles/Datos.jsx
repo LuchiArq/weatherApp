@@ -1,7 +1,5 @@
 import React from 'react';
 import './datos.scss';
-import { useSelector } from 'react-redux';
-
 export default function Datos({title,datos,icono,unidades}){
 
 

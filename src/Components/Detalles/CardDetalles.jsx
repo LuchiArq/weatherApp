@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 import Datos from './Datos'
 import Dias from './Dias'
 import moment from 'moment-timezone'
-import 'moment/locale/es'  
+import '../Card/node_modules/moment/locale/es'  
 import Statistics from './Statistics'
 import Current from './Current'
 

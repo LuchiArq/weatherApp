@@ -1,10 +1,10 @@
-import React,{useState,useEffect} from 'react';
+import React from 'react';
 import './statistics.scss';
 import { useSelector } from 'react-redux';
 import {Line} from 'react-chartjs-2'
 import 'chartjs-plugin-datalabels';
 import moment from 'moment-timezone'
-import 'moment/locale/es'  
+import '../Card/node_modules/moment/locale/es'  
 
 
 export default function Statistics({detalles,datos}){

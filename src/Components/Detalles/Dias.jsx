@@ -1,7 +1,6 @@
 import React from 'react';
 import './dias.scss';
 import Lottie from 'react-lottie'
-import { useSelector } from 'react-redux';
 import {setAnimacion} from '../funciones'
 
 export default function Dias({datos,fecha}){

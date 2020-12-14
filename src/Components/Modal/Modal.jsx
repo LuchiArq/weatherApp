@@ -1,7 +1,7 @@
-import React,{ useEffect,useState} from 'react';
+import React,{useState} from 'react';
 import ReactDom from 'react-dom'
 import "./modal.scss"
-import { useDispatch, useSelector } from 'react-redux';
+import {useSelector } from 'react-redux';
 import Lottie from 'react-lottie'
 
 export default function Modal({openClose}){

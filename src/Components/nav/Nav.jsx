@@ -7,13 +7,11 @@ import Modal from '../Modal/Modal'
 export default function Nav(){
 
     
-    const {error,mensaje} = useSelector((store) => store.cityReducer);
     const dispatch = useDispatch()
     const modo = useSelector((store) => store.cityReducer.mode);
     const ciudades = useSelector((store) => store.cityReducer.ciudades);
 
 const [Ciudad,setCiudad] = useState("");
-const [modal,setModal] = useState("")
 
 const modoNoche=()=>{
     dispatch(setMode(!modo))
