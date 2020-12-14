@@ -1,0 +1,89 @@
+@import '../../assets/master';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap');
+
+.det-current {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-family: "Nunito", sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "nombre nombre"
+      "animacion temperatura"
+      "animacion maxmin";
+  }
+.det-animacion {   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: animacion;
+  .container-icono{
+    width: 60%;
+  }
+}
+.det-current-dark{
+  background: linear-gradient(to top, #344279, #1C1F12);
+  color: #CEDDEC;
+}
+.det-nombre{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-area: nombre;
+    text-align: center;
+    &-nombre{
+      font-weight: 600;
+    }
+  }
+
+  .det-temperatura{ 
+    grid-area: temperatura;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &-maxmin{ 
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+    }
+  &-temp{
+    font-size: 3rem;
+    font-weight: 600;
+      text-align: center;
+    }
+  }
+
+
+  @media (max-width: 600px){
+    .det-current {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      font-family: "Nunito", sans-serif;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "nombre nombre"
+       "nombre nombre"
+        "animacion temperatura"
+        "animacion temperatura";
+    }
+    .det-nombre{
+      flex-direction: column;
+    }
+    .det-temperatura{
+      display: flex;
+      align-items: center;
+      &-temp{
+        font-size: 1rem;
+      }
+    }
+  }

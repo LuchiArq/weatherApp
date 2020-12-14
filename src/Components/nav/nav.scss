@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+.nav{
+    height: 50px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-template-areas:
+      "logo searchBar darkMode";
+    background-color: white;
+  }
+  .nav-dark{
+    background-color: #28303c;
+    color: #CEDDEC;
+  }
+  
+  .logo {
+      display: flex;
+      font-family: 'Dancing Script', cursive;
+      grid-area: logo; }
+
+  .searchBar { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: searchBar; 
+    height: 100%;
+           
+        &-label{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 350px;
+            height: 60%;
+            border: solid 2px lightgray;
+            border-radius: 30px;
+            padding: 3px;
+            position: relative;
+           
+            &-search{
+              margin-left: 10px;
+              padding-left: 10px;
+              font-size: 1.3rem;
+              outline: none;
+              background-color: transparent;
+              border: transparent;
+              height: 100%;
+              border-radius: 30px 0px 0px 30px;
+           }
+           &-search-dark{
+            color:#CEDDEC;
+           }
+           &-icon{
+             position: absolute;
+             cursor: pointer;
+               height: 30px;
+               width: 30px;
+               padding: 7px;
+               border-radius: 50px;
+               background-color: #64bdf4;
+              right: -5px;
+
+              // #dd1d6a
+           }
+           &-icon-dark{
+            background-color: #383838;
+            color:#CEDDEC
+           }
+
+        }
+        &-label-dark{
+          border: none;
+          background-color:#2c3756 ;
+        } 
+    }
+  
+  .darkMode { 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-area: darkMode; 
+    
+      &-lbl{
+        margin-left: 5px;
+        display: inline-block;
+        width: 55px;
+        height: 13px;
+        background: lightgray;
+        border-radius: 100px;
+        cursor: pointer;
+        position: relative;
+        transition: .2s;
+      }
+      &-lbl::after{
+        content: '';
+        display: block;
+        width: 25px;
+        height: 25px;
+        background: #eee;
+        border-radius: 100px;
+        position: absolute;
+        top: -5px;
+        left: -1px;
+        transition: .2s;
+      }
+    }
+    #switch:checked + .darkMode-lbl{
+      background-color:#2c3756;
+    }
+    #switch:checked + .darkMode-lbl::after{
+      left: 30px;
+      background: #383838;
+    }
+    #switch{
+      display: none;
+    }
+  
+  // Small devices (landscape phones, 576px and up)
+
+ .darkMode-mobile{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  padding: 7px;
+  border-radius: 50px;
+  background-color: #eee;
+
+ } 
+ .darkMode-mobile-dark{
+  background-color: #383838;
+  color:#CEDDEC;
+ }
+@media (max-width: 600px) { 
+  .nav{
+    display: grid;
+    align-items: center;
+    height: 100%;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "searchBar darkMode-mobile-area";
+    padding-right: 5px;
+
+      .searchBar-label{
+        width: 90%;
+        &-search{
+          width: 80%;
+        }
+      }
+  }
+  
+  .logo{
+    display: none;
+  }
+  .darkMode{
+    display: none;
+  }
+  .darkMode-mobile{
+    display: flex;
+  }
+  .darkMode-mobile-area{
+    display: flex;
+    justify-content: center;
+  }
+  
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {  }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  }

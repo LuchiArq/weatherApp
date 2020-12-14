@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import Container from './Components/Container.jsx'
+import Nav from './Components/nav/Nav'
+import CardDetalles from './Components/Detalles/CardDetalles'
+import { useDispatch, useSelector } from 'react-redux';
 
 function App() {
+//const dispatch  = useDispatch()
+
+const modo = useSelector((store) => store.cityReducer.mode);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className={`appContainer ${modo ? "appContainer-dark" : "appContainer-light"}`}>
+      <Route path ="/" component={Nav}/> 
+      <Route exact path ="/detalles/:name" component={CardDetalles}/>     
+      <Route exact path ="/" component={Container}/>  
+     </div>
+    </Router >
   );
 }
 

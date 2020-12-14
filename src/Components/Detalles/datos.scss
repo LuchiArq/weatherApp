@@ -1,0 +1,73 @@
+.dato-container {
+  height: 50px;
+  width: 140px;
+  border-radius: 10px;
+  box-shadow: 0 0 2rem rgba(0,0,255,.08);
+  padding: 10px;
+  margin: 4px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+      "tipo"
+      "dato";
+  
+  &-dato { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: dato; 
+  &-texto{
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+    &-unidades{
+      font-size: 1.1rem !important;
+    }
+  }
+  &-tipo { 
+    grid-area: tipo;
+    text-align: center;
+    font-size: .8rem !important;
+    font-weight: 600;
+    color: rgb(148, 148, 148); 
+  }
+}
+
+@media (max-width: 740px){
+  .dato-container {
+    height: 25px;
+    width: 130px;
+    border-radius: 10px;
+    box-shadow: 0 0 2rem rgba(0,0,255,.08);
+    padding: 3px;
+    margin: 4px;
+      display: grid;
+      place-items: center;
+      grid-template-columns: 3fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        "tipo dato";
+
+    &-dato { 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-area: dato; 
+    &-texto{
+      font-size: .8rem;
+      font-weight: 600;
+    }
+      &-unidades{
+        font-size: .7rem !important;
+      }
+    }
+    &-tipo { 
+      grid-area: tipo;
+      text-align: center;
+      font-size: .8rem !important;
+      font-weight: 400;
+      color: rgb(148, 148, 148); 
+    }
+  }
+}

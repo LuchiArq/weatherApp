@@ -1,0 +1,91 @@
+@import '../../assets/master';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap');
+
+.mainContainerCard{
+    background-color: white;
+    position: relative;
+    width: 280px;
+    height: 460px;
+    border-radius: 20px;
+    box-shadow: 0 0 2rem rgba(0,0,255,.1);
+    padding: 1.5rem;
+    margin: 15px;
+}
+.card{
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 2.5fr 1fr 1.5fr;
+    grid-template-areas:
+      "ciudad"
+      "icono-area"
+      "temp"
+      "maxmin";
+}
+
+.mainContainerCard-dark{
+    background: linear-gradient(to top, #344279, #1C1F12);
+    a{
+        color: #CEDDEC;
+    }
+}
+  .ciudad { 
+    grid-area: ciudad;
+
+    &-nombre{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    &-fecha{
+        padding: 5px 0;
+        font-size: 1rem
+    }
+
+    }
+.icono-area {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    grid-area: icono-area;
+    
+}
+  .icono { 
+      height: 200px;
+      width: 200px;
+    }
+  .temp { 
+      grid-area: temp;
+      &-temp{
+          font-size: 3rem;
+          font-weight: 600;
+          margin-right: -15px;
+      } 
+    }
+  .maxmin { 
+      display: flex;
+      justify-content: space-around;
+      grid-area: maxmin;
+
+      &-temperaturas{
+          font-size: 1.8rem;
+          margin-right: -10px;
+      }
+      &-text-max{
+          color:red;
+          font-weight: 600;
+      }
+      &-icon-max{
+        height: 3rem;
+        margin-bottom: -1.5rem;
+    }
+        &-text-min{
+            color:blue;
+            font-weight: 600;
+        }
+        &-icon-min{
+            height: 3rem;
+            margin-bottom: -1.5rem;
+        }
+    }

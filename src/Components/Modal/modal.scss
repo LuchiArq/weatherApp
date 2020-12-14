@@ -1,0 +1,72 @@
+@import '../../assets/master';
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  top: 20%;
+  height: 120px;
+  padding: 10px;
+  width: 280px;
+  box-shadow: 0px 9px 17px 6px rgba(0,0,0,0.45);
+  border-radius: 20px;
+  z-index:  1000;
+ 
+  &-mensaje{
+    padding: 10px;
+  }
+}
+
+
+.modal-dark{
+  background: linear-gradient(to top, #344279, #1C1F12);
+  color: #CEDDEC;
+}
+.modal-light{
+  background-color: white;
+  color:black;
+}
+  
+   .fondo {
+     display: flex;
+     justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 100;
+  }
+
+  @keyframes openFondo {
+    0% {
+      
+      opacity: 0;
+    }
+  
+    100% {
+    
+      opacity: 1;
+    }
+  }
+  .slideIn{
+    animation: slideIn .5s var(--curve) 0s 1 normal none;
+  }
+  .CloseModal{
+    animation: CloseModal .5s var(--curve) 0s 1 normal none;
+  }
+ 
+  @keyframes CloseModal {
+    100% {
+      transform: translateY(-3rem);
+      opacity: 0;
+    }
+  
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

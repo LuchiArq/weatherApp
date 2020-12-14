@@ -1,0 +1,24 @@
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "containerCard";
+    
+  }
+  .containerCard-light{
+    background-image: linear-gradient(to top,#5ee7df,#66a6ff);
+  }
+ .containerCard-dark{
+  background-image: linear-gradient(to top, #2B536F, #322b4b);
+ } 
+.containerCard {
+
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+grid-area: containerCard;       
+}
+
