@@ -12,8 +12,6 @@ export function getCity(city){
             fetch(url)
                 .then(respuesta=> respuesta.json() )
                 .then(datos=>{
-                    console.log("ESTA ES LA CIUDAD ",datos)
-                    
                         const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${datos.coord.lat}&lon=${datos.coord.lon}&lang=sp&exclude=minutely&appid=0942993d27025a20ba51ad6d7cf09141&units=metric`;
                         fetch(url)
                             .then(respuesta=> respuesta.json() )
@@ -22,7 +20,6 @@ export function getCity(city){
                                     datos,
                                     detalles
                                 }
-                                console.log("ESTA ES LA CIUDAD CON DETALLES ",obj)
                                 
                                 dispatch({
                                     type:GET_CITY,
@@ -30,7 +27,7 @@ export function getCity(city){
                     })
                 })
                 .catch(err=>{
-                    console.log("ASDASDASDASDA",err)
+                    console.log("ERROR",err)
                     dispatch({
                         type:ERROR,
                     })
@@ -56,7 +53,7 @@ export function getLocalCity(){
                             ciudad:obj })
             })
             })
-            .catch(err=>{console.log(err)})
+            .catch(err=>{console.log("ERROR ",err)})
         })
     }
 }

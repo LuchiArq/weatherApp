@@ -7,7 +7,6 @@ export default function Dias({datos,fecha}){
 
 let dia = fecha.split(" ").slice(0,2).join().replace(".,,"," ")
 
-console.log(datos)
    const defaultOptions = {
     loop: true,
     autoplay: true,

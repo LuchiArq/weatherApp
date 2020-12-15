@@ -12,7 +12,7 @@ export default (state = initalState, action)=>{
     switch(action.type){
 
         case GET_LOCAL_CITY :{
-            console.log("MI CIUDAD , ", action.ciudad)
+         
             return{
                 ...state,
                 ciudades: action.ciudad.datos.cod == "200" ? state.ciudades.concat(action.ciudad) : state.ciudades,
@@ -22,7 +22,7 @@ export default (state = initalState, action)=>{
 
         case GET_CITY:{
            var existe = !!(state.ciudades.filter(city=> city.datos.id == action.ciudad.datos.id)[0])
-           console.log("EXISTE ",existe)
+          
             return{  
                ...state, 
                ciudades: action.ciudad.datos.cod == "200" && !existe ? state.ciudades.concat(action.ciudad) : state.ciudades,
