@@ -12,7 +12,7 @@ const modo = useSelector((store) => store.cityReducer.mode);
 
 
 return(
-    <div className="container">
+    <div className="cont container">
 
         <div className={`containerCard ${modo ? "containerCard-dark" : "containerCard-light"}`}>
             { 

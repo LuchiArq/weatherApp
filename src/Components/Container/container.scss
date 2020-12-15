@@ -14,11 +14,16 @@
   background-image: linear-gradient(to top, #2B536F, #322b4b);
  } 
 .containerCard {
-
 display: flex;
 flex-wrap: wrap;
+flex-direction: row-reverse;
 justify-content: center;
 align-items: center;
 grid-area: containerCard;       
+}
+@media (max-width: 720px){
+  .containerCard{
+    flex-direction: column-reverse;
+  }
 }
 
